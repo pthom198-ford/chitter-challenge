@@ -1,9 +1,17 @@
 require 'sinatra/base'
 
+# attr_reader :peeps
+
 class Chitter < Sinatra::Base
 
   get '/chitter' do
-    "Chitter Homepage!"
+    peeps = [
+      "my first peep",
+      "my second peep",
+      "my third peep"
+    ]
+peeps.join
+
   end
 
 

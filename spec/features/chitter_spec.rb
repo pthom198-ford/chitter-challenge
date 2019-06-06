@@ -1,8 +1,8 @@
 feature 'Viewing peeps' do
-  scenario 'visiting the chitter homepage' do
-    visit ('/chitter')
-    expect(page). to have_content "Chitter Homepage!"
-  end
+  # scenario 'visiting the chitter homepage' do
+  #   visit ('/chitter')
+  #   expect(page). to have_content "Chitter Homepage!"
+  # end
 
   scenario 'A user can see peeps' do
     visit ('/chitter')
