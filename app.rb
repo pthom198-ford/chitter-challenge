@@ -5,13 +5,13 @@ require 'sinatra/base'
 class Chitter < Sinatra::Base
 
   get '/chitter' do
-    peeps = [
+    @peeps = [
       "my first peep",
       "my second peep",
       "my third peep"
     ]
-peeps.join
-
+    erb :peeps
+    
   end
 
 
