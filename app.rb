@@ -5,13 +5,7 @@ require './lib/peeps'
 class Chitter < Sinatra::Base
 
   get '/chitter' do
-    @peeps = peeps.all
-
-    # [
-    #   "my first peep",
-    #   "my second peep",
-    #   "my third peep"
-    # ]
+    @peeps = Peeps.all
     erb :peeps
 
   end
