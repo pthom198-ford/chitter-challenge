@@ -3,7 +3,11 @@ require 'peeps'
 describe Peeps do
   describe '.all' do
     it 'returns all peeps' do
-      peeps = Peeps.all
+      connection = PG.connect(dbname: 'chitter_manager_test')
+
+      connection.exec("INSERT INTO chitter (peep) VALUES ('my first peep');")
+    connection.exec("INSERT INTO chitter (peep) VALUES('my second peep');")
+    connection.exec("INSERT INTO chitter (peep) VALUES('my third peep');")
 
       expect(peeps).to include("my first peep")
       expect(peeps).to include("my second peep")
