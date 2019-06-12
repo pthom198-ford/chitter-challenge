@@ -12,3 +12,13 @@ feature 'Viewing peeps' do
     expect(page). to have_content "my third peep"
   end
 end
+
+feature 'posting peeps' do
+  scenario 'A user can submit peeps using button' do
+    visit ('/chitter')
+
+    fill_in('peep', with: 'my fourth peep')
+    click_button('post')
+    expect(page). to have_content('my fourth peep')
+  end
+end

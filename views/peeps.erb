@@ -1,3 +1,10 @@
+<form action="/chittersubmitted" method="post">
+  Peep:<br>
+  <input type="text" name="peep">
+ <br>
+  <input type="submit" value="post">
+</form>
+
 <% @peeps.each do |peep|%>
 <li> <%=peep%> </li>
 <% end%>

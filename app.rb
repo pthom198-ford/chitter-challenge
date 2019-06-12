@@ -10,6 +10,11 @@ class Chitter < Sinatra::Base
 
   end
 
+  post '/chittersubmitted' do
+    @peep = Peeps.add(params[:peep])
+    # params[:peep]
+    redirect '/chitter'
+  end
 
   run! if app_file == $0
 end
